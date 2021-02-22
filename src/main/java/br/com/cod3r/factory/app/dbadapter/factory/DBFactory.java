@@ -1,19 +1,22 @@
 package br.com.cod3r.factory.app.dbadapter.factory;
 
+import java.util.Objects;
+
 import br.com.cod3r.factory.app.dbadapter.db.DB;
 import br.com.cod3r.factory.app.dbadapter.db.OracleDB;
 import br.com.cod3r.factory.app.dbadapter.db.PostgresDB;
 
 public class DBFactory {
-	public static DB getDatabase(String dbType) {
-		DB db = null;
+	
+	public static DB getDatabase(DBTypes dbType) {
+		dbType = Objects.requireNonNullElse(dbType, DBTypes.ORACLE);
 		
-		if("oracle".equalsIgnoreCase(dbType)) {
-			db = new OracleDB();
-		} else if ("postgres".equalsIgnoreCase(dbType)) {
-			db = new PostgresDB();
+		switch (dbType) {
+		case POSTGRES:
+			return new PostgresDB();
+		case ORACLE:
+		default:
+			return new OracleDB();
 		}
-		
-		return db;
 	}
 }
