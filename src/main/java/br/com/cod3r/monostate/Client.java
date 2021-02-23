@@ -1,9 +1,10 @@
-package br.com.cod3r.singleton.connectionPool;
+package br.com.cod3r.monostate;
 
-import br.com.cod3r.singleton.connectionPool.conn.Connection;
-import br.com.cod3r.singleton.connectionPool.conn.ConnectionPool;
+import br.com.cod3r.monostate.connectionPool.conn.Connection;
+import br.com.cod3r.monostate.connectionPool.conn.ConnectionPool;
 
 public class Client {
+	
 	public static void doQuery1() {
 		ConnectionPool pool = new ConnectionPool();
 		Connection conn = pool.getConnection();
@@ -16,6 +17,7 @@ public class Client {
 		Connection conn = pool.getConnection();
 		if(conn != null)
 			conn.query("SELECT * FROM A2");
+		
 	}
 	
 	public static void doQuery3() {

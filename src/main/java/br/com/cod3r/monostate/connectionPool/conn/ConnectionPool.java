@@ -1,23 +1,18 @@
-package br.com.cod3r.singleton.connectionPool.conn;
+package br.com.cod3r.monostate.connectionPool.conn;
 
 import java.util.Collection;
 import java.util.HashSet;
 
 public class ConnectionPool {
 	private final static int POOL_SIZE = 2;
-	private final static ConnectionPool singleton = new ConnectionPool();
-	private Collection<Connection> connectionsPool;
+	private static Collection<Connection> connectionsPool;
 
-	private ConnectionPool() {
+	static {
 		System.out.println("Creating Connection Pool");
 		connectionsPool = new HashSet<>();
 		for (int i = 0; i < POOL_SIZE; i++) {
 			connectionsPool.add(new Connection());
 		}
-	}
-	
-	public static ConnectionPool getInstance() {
-		return singleton;
 	}
 
 	public Connection getConnection() {
