@@ -1,4 +1,4 @@
-package br.com.cod3r.builder.meal.model;
+package br.com.cod3r.builder.traditional.meal.model;
 
 public class FastFoodMeal {
 
@@ -50,7 +50,6 @@ public class FastFoodMeal {
 
 	@Override
 	public String toString() {
-		return "Combo [drink=" + drink + ", main=" + main + ", side=" 
-				+ side + ", dessert=" + dessert + ", gift=" + gift + "]";
+		return String.format("Combo [drink=%s, main=%s, side=%s, dessert=%s, gift=%s]", drink, main, side, dessert, gift);
 	}
 }
