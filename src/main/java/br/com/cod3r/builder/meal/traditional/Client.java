@@ -1,7 +1,7 @@
-package br.com.cod3r.builder.traditional.meal;
+package br.com.cod3r.builder.meal.traditional;
 
-import br.com.cod3r.builder.traditional.meal.builder.ComboBuilder;
-import br.com.cod3r.builder.traditional.meal.director.MealDirector;
+import br.com.cod3r.builder.meal.traditional.builder.ComboBuilder;
+import br.com.cod3r.builder.meal.traditional.director.MealDirector;
 
 public class Client {
 	

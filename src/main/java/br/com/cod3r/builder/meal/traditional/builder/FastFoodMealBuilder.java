@@ -1,6 +1,6 @@
-package br.com.cod3r.builder.traditional.meal.builder;
+package br.com.cod3r.builder.meal.traditional.builder;
 
-import br.com.cod3r.builder.traditional.meal.model.FastFoodMeal;
+import br.com.cod3r.builder.meal.traditional.model.FastFoodMeal;
 
 public abstract class FastFoodMealBuilder {
 	

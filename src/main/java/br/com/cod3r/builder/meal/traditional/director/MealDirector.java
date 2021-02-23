@@ -1,7 +1,7 @@
-package br.com.cod3r.builder.traditional.meal.director;
+package br.com.cod3r.builder.meal.traditional.director;
 
-import br.com.cod3r.builder.traditional.meal.builder.FastFoodMealBuilder;
-import br.com.cod3r.builder.traditional.meal.model.FastFoodMeal;
+import br.com.cod3r.builder.meal.traditional.builder.FastFoodMealBuilder;
+import br.com.cod3r.builder.meal.traditional.model.FastFoodMeal;
 
 public class MealDirector {
 

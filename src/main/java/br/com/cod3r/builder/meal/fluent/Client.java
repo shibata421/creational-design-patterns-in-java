@@ -1,7 +1,7 @@
-package br.com.cod3r.builder.fluent.meal;
+package br.com.cod3r.builder.meal.fluent;
 
-import br.com.cod3r.builder.fluent.meal.builder.FastFoodMeal;
-import br.com.cod3r.builder.fluent.meal.builder.FastFoodMealBuilder;
+import br.com.cod3r.builder.meal.fluent.builder.FastFoodMeal;
+import br.com.cod3r.builder.meal.fluent.builder.FastFoodMealBuilder;
 
 public class Client {
 	

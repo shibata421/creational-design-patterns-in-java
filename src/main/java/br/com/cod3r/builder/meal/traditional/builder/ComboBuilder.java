@@ -1,4 +1,4 @@
-package br.com.cod3r.builder.traditional.meal.builder;
+package br.com.cod3r.builder.meal.traditional.builder;
 
 public class ComboBuilder extends FastFoodMealBuilder {
 

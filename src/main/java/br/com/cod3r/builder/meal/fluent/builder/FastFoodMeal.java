@@ -1,4 +1,4 @@
-package br.com.cod3r.builder.fluent.meal.builder;
+package br.com.cod3r.builder.meal.fluent.builder;
 
 public class FastFoodMeal {
 
