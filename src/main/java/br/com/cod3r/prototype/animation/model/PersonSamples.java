@@ -4,25 +4,25 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PersonSamples {
-	private Map<String, Person> samples;
+	private Map<PersonType, Person> samples;
 	
 	public PersonSamples() {
 		samples = new HashMap<>();
 		loadSamples();
 	}
 	
-	public Person get(String type) {
+	public Person get(PersonType type) {
 		return samples.get(type);
 	}
 	
 	private void loadSamples() {
-		samples.put("stickMan", new Person(
+		samples.put(PersonType.STICKMAN, new Person(
 				"                   ",
 				"        o          ",
 				"       /|\\          ",
 				"_______/_\\___________"	
 				));
-		samples.put("fatMan", new Person(
+		samples.put(PersonType.FATMAN, new Person(
 				"                   ",
 				"       (^ ^)          ",
 				"       <)  )\\         ",
