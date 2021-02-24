@@ -3,11 +3,11 @@ package br.com.cod3r.builder.spolleto.after.director;
 import br.com.cod3r.builder.spolleto.after.builder.MealBuilder;
 import br.com.cod3r.builder.spolleto.after.model.Meal;
 
-public class MealDirector<T extends Meal> {
+public class MealDirector {
 	
-	private MealBuilder<T> builder;
+	private MealBuilder<?> builder;
 
-	public MealDirector(MealBuilder<T> builder) {
+	public MealDirector(MealBuilder<? extends Meal> builder) {
 		this.builder = builder;
 	}
 	
@@ -18,7 +18,7 @@ public class MealDirector<T extends Meal> {
 		builder.addToppings();
 	}
 	
-	public T getOrder() {
+	public Meal getOrder() {
 		return builder.getMeal();
 	}
 
