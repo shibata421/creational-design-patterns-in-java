@@ -1,15 +1,22 @@
 package br.com.cod3r.prototype.deepShallow.model;
 
 public class User implements Cloneable {
-	public String name;
-	public Integer age;
-	public Address address;
+	private String name;
+	private Integer age;
+	private Address address;
 	
 	public User(String name, Integer age, Address address) {
-		super();
 		this.name = name;
 		this.age = age;
 		this.address = address;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Address getAddress() {
+		return address;
 	}
 
 	@Override
@@ -20,5 +27,11 @@ public class User implements Cloneable {
 	@Override
 	public User clone() throws CloneNotSupportedException {
 		return (User) super.clone();
+	}
+
+	public User deepClone() throws CloneNotSupportedException {
+		User userClone = (User) super.clone();
+		userClone.address = address.clone();
+		return userClone;
 	}
 }

@@ -9,9 +9,9 @@ public class Client {
 		User user = new User("Clone", 25, new Address("ABC Street", 1000));
 		System.out.println(user);
 		
-		User cloneUser = user.clone();
-		cloneUser.name = "Clone x2";
-		cloneUser.address.street = "Double Street";
+		User cloneUser = user.deepClone();
+		cloneUser.setName("Clone x2");
+		cloneUser.getAddress().setStreet("Double Street");
 		System.out.println(user);
 		System.out.println(cloneUser);
 	}
